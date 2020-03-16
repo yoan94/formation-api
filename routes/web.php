@@ -52,8 +52,25 @@ $router->delete("/blogs/{studentId:[0-9]+}", [
     "uses" => "BlogController@delete"
 ]);
 
+// ARTICLES
 
+$router->get("/articles", "ArticleController@list");
 
+$router->get("/articles/{articleId:[0-9]+}", "ArticleController@show");
+
+$router->get("/blogs/{blogId:[0-9]+}/articles", "ArticleController@showBlog");
+
+$router->post("/articles", [
+    "middleware" => "authorization",
+    "uses" => "ArticleController@store"
+]);
+
+$router->delete("/articles/{articleId:[0-9]+}", [
+    "middleware" => "authorization",
+    "uses" => "ArticleController@delete"
+]);
+
+// ---------------
 
 $router->get("/test", function () {
     return '

@@ -20,6 +20,7 @@ class CreateArticlesTable extends Migration
                 ->references('id')->on('blogs')
                 ->onDelete('cascade');
             $table->index('blog_id');
+            $table->string("title", 200);
             $table->text("text");
             $table->timestamps();
         });
