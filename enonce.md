@@ -59,10 +59,11 @@ Un article peut avoir plusieurs commentaires
 [✔] POST api/blogs: crée un blog<br>
 [✔] DELETE api/blogs/id: supprime un blog. Sécuriser l'emploi de cette méthode.<br>
 
-[✖] GET api/articles: récupère tous les articles<br>
-[✖] GET api/articles/id: récupère un article à l'id donné<br>
-[✖] GET api/articles/id_blog: récupère les articles d'un blog donné.<br>
-[✖] POST api/articles : crée un nouvel article
+[✔] GET api/articles: récupère tous les articles<br>
+[✔] GET api/articles/id: récupère un article à l'id donné<br>
+[✔] GET api/articles/id_blog: récupère les articles d'un blog donné.<br>
+[✔] POST api/articles : crée un nouvel article<br>
+[✔] DELETE api/articles/id : supprime un article
 
 [✖] GET api/comments: récupère tous les commentaires<br>
 [✖] GET api/comments/id: récupère le commentaire<br>
