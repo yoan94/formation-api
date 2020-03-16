@@ -50,22 +50,22 @@ Un article peut avoir plusieurs commentaires
 
 #### Méthodes
 
-GET api/students : récupère tous les étudiants<br>
-GET api/students/id : récupère l'étudiant avec l'ID sélectionné<br>
-POST api/students : crée un nouvel étudiant. Id automatique.<br>
-DELETE api/students: supprime un étudiant de la base. Sécuriser l'emploi de cette méthode.
+[✔] GET api/students : récupère tous les étudiants<br>
+[✔] GET api/students/id : récupère l'étudiant avec l'ID sélectionné<br>
+[✔] POST api/students : crée un nouvel étudiant. Id automatique.<br>
+[✔] DELETE api/students: supprime un étudiant de la base. Sécuriser l'emploi de cette méthode.
 
-GET api/blogs/id_student: récupère le blog correspondant à un étudiant<br>
-POST api/blogs: crée un blog<br>
-DELETE api/blogs/id: supprime un blog. Sécuriser l'emploi de cette méthode.<br>
+[✔] GET api/blogs/id_student: récupère le blog correspondant à un étudiant<br>
+[✔] POST api/blogs: crée un blog<br>
+[✔] DELETE api/blogs/id: supprime un blog. Sécuriser l'emploi de cette méthode.<br>
 
-GET api/articles: récupère tous les articles<br>
-GET api/articles/id: récupère un article à l'id donné<br>
-GET api/articles/id_blog: récupère les articles d'un blog donné.<br>
-POST api/articles : crée un nouvel article
+[✖] GET api/articles: récupère tous les articles<br>
+[✖] GET api/articles/id: récupère un article à l'id donné<br>
+[✖] GET api/articles/id_blog: récupère les articles d'un blog donné.<br>
+[✖] POST api/articles : crée un nouvel article
 
-GET api/comments: récupère tous les commentaires<br>
-GET api/comments/id: récupère le commentaire<br>
-GET api/comments/id_article: récupère tous les commentaires liés à un article<br>
-POST api/comments: crée un commentaire<br>
-DELETE api/comments/id: supprime un commentaire. Sécuriser cette méthode.
+[✖] GET api/comments: récupère tous les commentaires<br>
+[✖] GET api/comments/id: récupère le commentaire<br>
+[✖] GET api/comments/id_article: récupère tous les commentaires liés à un article<br>
+[✖] POST api/comments: crée un commentaire<br>
+[✖] DELETE api/comments/id: supprime un commentaire. Sécuriser cette méthode.
