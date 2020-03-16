@@ -20,4 +20,68 @@ $router->get("/", function () use ($router) {
     ];
 });
 
+// STUDENT
+
 $router->get("/students", "StudentController@list");
+
+$router->get("/students/{id:[0-9]+}", "StudentController@show");
+
+$router->post("/students", [
+    "middleware" => "authorization",
+    "uses" => "StudentController@store"
+]);
+
+$router->delete("/students/{id:[0-9]+}", [
+    "middleware" => "authorization",
+    "uses" => "StudentController@delete"
+]);
+
+// BLOG
+
+$router->get("/blogs", "BlogController@list");
+
+$router->get("/blogs/{studentId:[0-9]+}", "BlogController@show");
+
+$router->post("/blogs", [
+    "middleware" => "authorization",
+    "uses" => "BlogController@store"
+]);
+
+$router->delete("/blogs/{studentId:[0-9]+}", [
+    "middleware" => "authorization",
+    "uses" => "BlogController@delete"
+]);
+
+
+
+
+$router->get("/test", function () {
+    return '
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+
+    /*
+    $.ajax({
+        url : "/students", // La ressource ciblée
+        type : "POST", // Le type de la requête HTTP.
+        data : {
+            name: "Lol",
+            firstname: "Test",
+            birthdate: "2005-05-20",
+            major: ["HTML", "CSS", "JS"],
+            marks: [30, 10, 20, 40, 60]
+        },
+        headers : {
+            Authorization: "pEpYp1NQGIN62dN1t0ALotrG21WXPoZB"
+        },
+        success: function (b) {
+            console.log(b)
+        }
+    });
+    */
+
+    
+
+
+    </script>';
+});

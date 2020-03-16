@@ -7,3 +7,5 @@ Homestead.yaml
 
 /deploy.sh
 /archive.zip
+/init.sql
+/exo.md
