@@ -32,9 +32,6 @@ class Student extends Model {
         ];
     }
 
-    /**
-     * @return Student[]
-     */
     public static function allForApi(): array {
         $data = [];
         foreach(self::all() as $student) {
