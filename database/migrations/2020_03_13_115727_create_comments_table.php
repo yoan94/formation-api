@@ -20,7 +20,7 @@ class CreateCommentsTable extends Migration
                 ->references('id')->on('articles')
                 ->onDelete('cascade');
             $table->index('article_id');
-            $table->string("texte");
+            $table->text("text");
             $table->integer("likes");
             $table->timestamps();
         });

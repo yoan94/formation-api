@@ -65,8 +65,8 @@ Un article peut avoir plusieurs commentaires
 [✔] POST api/articles : crée un nouvel article<br>
 [✔] DELETE api/articles/id : supprime un article
 
-[✖] GET api/comments: récupère tous les commentaires<br>
-[✖] GET api/comments/id: récupère le commentaire<br>
-[✖] GET api/comments/id_article: récupère tous les commentaires liés à un article<br>
-[✖] POST api/comments: crée un commentaire<br>
-[✖] DELETE api/comments/id: supprime un commentaire. Sécuriser cette méthode.
+[✔] GET api/comments/last: récupère les 10 derniers commentaires<br>
+[✔] GET api/comments/id: récupère le commentaire<br>
+[✔] GET api/comments/id_article: récupère tous les commentaires liés à un article<br>
+[✔] POST api/comments: crée un commentaire<br>
+[✔] DELETE api/comments/id: supprime un commentaire. Sécuriser cette méthode.

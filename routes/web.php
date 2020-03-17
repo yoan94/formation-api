@@ -70,35 +70,22 @@ $router->delete("/articles/{articleId:[0-9]+}", [
     "uses" => "ArticleController@delete"
 ]);
 
+// COMMENTAIRE
+
+$router->get("/comments/last", "CommentController@last");
+
+$router->get("/comments/{commentId:[0-9]+}", "CommentController@show");
+
+$router->get("/articles/{articleId:[0-9]+}/comments", "CommentController@showArticle");
+
+$router->post("/comments", [
+    "middleware" => "authorization",
+    "uses" => "CommentController@store"
+]);
+
+$router->delete("/comments/{commentId:[0-9]+}", [
+    "middleware" => "authorization",
+    "uses" => "CommentController@delete"
+]);
+
 // ---------------
-
-$router->get("/test", function () {
-    return '
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script>
-
-    /*
-    $.ajax({
-        url : "/students", // La ressource ciblée
-        type : "POST", // Le type de la requête HTTP.
-        data : {
-            name: "Lol",
-            firstname: "Test",
-            birthdate: "2005-05-20",
-            major: ["HTML", "CSS", "JS"],
-            marks: [30, 10, 20, 40, 60]
-        },
-        headers : {
-            Authorization: "pEpYp1NQGIN62dN1t0ALotrG21WXPoZB"
-        },
-        success: function (b) {
-            console.log(b)
-        }
-    });
-    */
-
-    
-
-
-    </script>';
-});
